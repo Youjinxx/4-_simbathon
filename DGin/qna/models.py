@@ -23,7 +23,7 @@ class Major(models.Model):
 
     def __str__(self):
         return self.name
-
+        
 #질문
 class Question(models.Model):
     title = models.CharField(max_length=200)
