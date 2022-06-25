@@ -7,11 +7,27 @@
      <div>
          {% for post in posts %}
 
-         <a href="{% url 'qna:detail' question.id %}">{{question.title}}</a><hr>
+         
 
 
          {% endfor %}
      </div>
 </div>
+
+<table>
+    
+    <tr>
+        <td class="profile_title">학번</td>
+        <td class="profile_content">{{ user.student_id|default:'작성안함' }}</td>
+    </tr>
+    <tr>
+        <td class="profile_title">학년</td>
+        <td class="profile_content">{{ user.grade|default:'선택안함' }}</td>
+    </tr>
+    <tr>
+        <td class="profile_title">학과</td>
+        <td class="profile_content">{{ user.department|default:'선택안함' }}</td>
+    </tr>
+</table>
 
 {% endblock %}
